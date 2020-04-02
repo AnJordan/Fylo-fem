@@ -102,7 +102,7 @@ header .flex {
     width: 40px;
   }
 
-  h5{
+  h5 {
     font-weight: 700;
     margin: 0;
   }
@@ -141,20 +141,20 @@ footer {
 }
 
 footer ul {
-    list-style-type: none;
-    padding-right: 45px;
+  list-style-type: none;
+  padding-right: 45px;
 
 }
 
 footer ul li {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    img{
-      margin-right: 15px;
-    }
+  img {
+    margin-right: 15px;
+  }
 }
 
-footer ul li a{
+footer ul li a {
   color: #fff;
   text-decoration: none;
 }
@@ -164,32 +164,33 @@ footer p {
 }
 
 
-  .social{
-    display: flex;
+.social {
+  display: flex;
+  align-items: center;
+
+  .circle {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-flex;
     align-items: center;
-     .circle {
-       border: 1px solid #fff;
-       border-radius: 50%;
-       color: #fff;
-       display: inline-flex;
-       align-items: center;
-       justify-content: center;
-       margin-right: 10px;
-       height: 40px;
-       width: 40px;
+    justify-content: center;
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
 
-     }
   }
+}
 
-.attribution{
+.attribution {
   // text-align: center;
 
-  a{
+  a {
     color: #fff;
     font-size: smaller;
     text-decoration: none;
 
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }
@@ -199,125 +200,124 @@ footer p {
 
 // Mobile Style
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
-    body {
-      text-align: center;
+  body {
+    text-align: center;
+  }
+
+  h1,
+  h2 {
+    font-size: larger;
+    line-height: 1.5;
+  }
+
+  // mobile nav style
+
+  nav {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  nav ul li {
+    margin: 10px 20px;
+  }
+
+
+  // mobile form style
+  form {
+    flex-direction: column;
+
+    input {
+      flex: 1;
     }
 
-    h1,
-    h2
-    {
-      font-size: larger;
-      line-height: 1.5;
+    button {
+      margin: 20px 0;
+      width: 100%;
+    }
+  }
+
+
+  .flex img {
+    margin-top: 20px;
+  }
+
+  .flex {
+    flex-direction: column;
+
+    &>div {
+      width: 100%;
+
+      &:first-child {
+        margin-right: 0;
+        order: 2;
+      }
+
+      &:last-child {
+        margin-left: 0;
+        padding-bottom: 25px;
+        order: 1;
+      }
+    }
+  }
+
+  #features::before {
+    background-image: url('../images/bg-curve-mobile.svg');
+    height: 80px;
+  }
+
+  .testimonial {
+    width: 100%;
+
+    .quotes {
+      margin-left: -240px;
+    }
+  }
+
+  .user-info {
+    text-align: left;
+    justify-content: center;
+
+    img {
+      margin-top: 0;
     }
 
-    // mobile nav style
 
-    nav {
-      flex-direction: column;
-      margin: 10px 0;
+    small {
+      font-size: smaller;
+    }
+  }
+
+  #signin {
+
+    div:first-child {
+      order: 1;
     }
 
-    nav ul li {
-      margin: 10px 20px;
-    }
-
-
-    // mobile form style
     form {
-      flex-direction: column;
-
       input {
         flex: 1;
       }
 
       button {
-        margin: 20px 0;
         width: 100%;
       }
     }
+  }
 
+  .illustration {
+    margin-bottom: 10px;
+  }
 
-    .flex img {
-      margin-top: 20px;
-    }
+  footer ul {
+    padding: 0;
+    width: 100%;
+  }
 
-    .flex{
-      flex-direction: column;
-
-      &>div {
-        width: 100%;
-
-        &:first-child {
-          margin-right: 0;
-          order: 2;
-        }
-
-        &:last-child {
-          margin-left: 0;
-          padding-bottom: 25px;
-          order: 1;
-        }
-      }
-    }
-
-    #features::before {
-        background-image: url('../images/bg-curve-mobile.svg');
-        height: 80px;
-      }
-
-    .testimonial {
-      width: 100%;
-
-      .quotes{
-        margin-left: -240px;
-      }
-    }
-    .user-info{
-      text-align:left ;
-      justify-content: center;
-
-      img{
-        margin-top: 0;
-      }
-
-
-      small{
-        font-size: smaller;
-      }
-    }
-
-    #signin{
-
-      div:first-child{
-        order: 1;
-      }
-
-      form {
-        input {
-          flex: 1;
-        }
-        button{
-          width: 100%;
-        }
-      }
-    }
-
-    .illustration{
-      margin-bottom: 10px;
-    }
-
-    footer ul {
-      padding: 0;
-      width: 100%;
-    }
-
-    .social{
-      justify-content: center;
-    }
+  .social {
+    justify-content: center;
+  }
 
 
 }
-
-
