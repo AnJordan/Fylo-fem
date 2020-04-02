@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700&display=swap");
+
+$raleway: 'Raleway',
+san-serif;
+$opensans: 'Open Sans',
+san-serif;
+$darkblue: hsl(243, 87%, 12%);
+$dsatblue: hsl(238, 22%, 44%);
+$briteblut: hsl(224, 93%, 58%);
+$cyan: hsl(170, 45%, 43%);
+$lg-blue: hsl(240, 75%, 98%);
+$lgrey: hsl(0, 0%, 75%);
+
+.container {
+  padding: 30px;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+
+}
+
+
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.align-start {
+  align-items: flex-start;
+  margin-top: 15px;
+}
+
+.flex>div:first-child {
+  margin-right: 20px;
+}
+
+.flex>div:last-child {
+  margin-left: 20px;
+}
+
+// Form Style
+
+form {
+  display: flex;
+  margin-top: 15px;
+
+  input {
+    border: 1px solid $darkblue;
+    border-radius: 3px;
+    padding: 10px;
+    flex: .6;
+    font-family: $raleway;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+    &::placeholder {
+      color: $lgrey;
+    }
+  }
+
+  button {
+    background-color: $briteblut;
+    color: #fff;
+    border: $briteblut 1px solid;
+    border-radius: 3px;
+    font-family: $raleway;
+    padding: 10px;
+    flex: .4;
+    margin-left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  }
+}

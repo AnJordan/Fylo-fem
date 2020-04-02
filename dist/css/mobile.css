@@ -1,0 +1,18 @@
+@media (max-width: 768px) {
+  body {
+    text-align: center; }
+  nav {
+    flex-direction: column;
+    margin: 10px 0; }
+  nav ul li {
+    margin: 10px 20px; }
+  form {
+    flex-direction: column; }
+    form input {
+      flex: 1; }
+    form button {
+      margin: 20px 0;
+      width: 100%; }
+  #features::before {
+    background-image: url("../images/bg-curve-mobile.svg");
+    height: 70px; } }

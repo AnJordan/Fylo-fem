@@ -1,0 +1,323 @@
+@import 'reset';
+@import 'utilities';
+
+body {
+  font-family: $opensans;
+  color: $darkblue;
+  font-size: 1.1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h5 {
+  font-family: $raleway;
+
+}
+
+.flex>div,
+.flex>ul {
+  flex: 1;
+}
+
+// Nav style
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 30px 0;
+
+    li {
+      margin-left: 50px;
+
+      a {
+        color: $darkblue;
+        text-decoration: none;
+        font-family: $raleway;
+      }
+    }
+
+  }
+}
+
+header .flex {
+  margin-top: 75px;
+}
+
+#features {
+  background-color: $lg-blue;
+  margin-top: 100px;
+  position: relative;
+  padding: 50px 0;
+
+  a {
+    color: $cyan;
+  }
+
+  &::before {
+    content: ' ';
+    background-image: url('../images/bg-curve-desktop.svg');
+    background-size: cover;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    height: 60px;
+    width: 100%;
+  }
+}
+
+.testimonial {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  margin-top: 40px;
+  width: 65%;
+
+  p {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 1;
+  }
+
+}
+
+.user-info {
+  display: flex;
+  margin-top: 20px;
+
+  & img {
+    border-radius: 50%;
+    height: 40px;
+    margin-right: 10px;
+    width: 40px;
+  }
+
+  h5{
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+#signin {
+  background-color: $dsatblue;
+  color: #fff;
+  padding: 50px 0;
+
+  form {
+    flex-direction: column;
+
+    input {
+      flex: 1;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      border: none;
+    }
+
+    button {
+      margin: 20px 0;
+      width: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  p {
+    margin: 20px 0;
+  }
+}
+
+footer {
+  background-color: $darkblue;
+  color: #fff;
+  padding: 50px 0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding-right: 45px;
+
+}
+
+footer ul li {
+    margin-bottom: 20px;
+
+    img{
+      margin-right: 15px;
+    }
+}
+
+footer ul li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+footer p {
+  text-align: center;
+}
+
+
+  .social{
+    display: flex;
+    align-items: center;
+     .circle {
+       border: 1px solid #fff;
+       border-radius: 50%;
+       color: #fff;
+       display: inline-flex;
+       align-items: center;
+       justify-content: center;
+       margin-right: 10px;
+       height: 40px;
+       width: 40px;
+
+     }
+  }
+
+.attribution{
+  // text-align: center;
+
+  a{
+    color: #fff;
+    font-size: smaller;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+}
+
+
+// Mobile Style
+
+@media(max-width:768px){
+
+    body {
+      text-align: center;
+    }
+
+    h1,
+    h2
+    {
+      font-size: larger;
+      line-height: 1.5;
+    }
+
+    // mobile nav style
+
+    nav {
+      flex-direction: column;
+      margin: 10px 0;
+    }
+
+    nav ul li {
+      margin: 10px 20px;
+    }
+
+
+    // mobile form style
+    form {
+      flex-direction: column;
+
+      input {
+        flex: 1;
+      }
+
+      button {
+        margin: 20px 0;
+        width: 100%;
+      }
+    }
+
+
+    .flex img {
+      margin-top: 20px;
+    }
+
+    .flex{
+      flex-direction: column;
+
+      &>div {
+        width: 100%;
+
+        &:first-child {
+          margin-right: 0;
+          order: 2;
+        }
+
+        &:last-child {
+          margin-left: 0;
+          padding-bottom: 25px;
+          order: 1;
+        }
+      }
+    }
+
+    #features::before {
+        background-image: url('../images/bg-curve-mobile.svg');
+        height: 80px;
+      }
+
+    .testimonial {
+      width: 100%;
+
+      .quotes{
+        margin-left: -240px;
+      }
+    }
+    .user-info{
+      text-align:left ;
+      justify-content: center;
+
+      img{
+        margin-top: 0;
+      }
+
+
+      small{
+        font-size: smaller;
+      }
+    }
+
+    #signin{
+
+      div:first-child{
+        order: 1;
+      }
+
+      form {
+        input {
+          flex: 1;
+        }
+        button{
+          width: 100%;
+        }
+      }
+    }
+
+    .illustration{
+      margin-bottom: 10px;
+    }
+
+    footer ul {
+      padding: 0;
+      width: 100%;
+    }
+
+    .social{
+      justify-content: center;
+    }
+
+
+}
+
+
